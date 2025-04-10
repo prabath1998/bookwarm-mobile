@@ -10,7 +10,7 @@ export const useAuthStore = create((set) => ({
     set({ isLoading: true });
     try {
       const response = await fetch(
-        "https://ef95-2402-4000-2120-a09-f1c6-a21f-5d6e-bc6.ngrok-free.app/api/auth/register",
+        "https://feb8-2402-4000-2100-2e02-d0e4-3598-d05f-6d43.ngrok-free.app/api/auth/register",
         {
           method: "POST",
           headers: {
@@ -67,7 +67,7 @@ export const useAuthStore = create((set) => ({
     set({ isLoading: true });
     try {
       const response = await fetch(
-        "https://ef95-2402-4000-2120-a09-f1c6-a21f-5d6e-bc6.ngrok-free.app/api/auth/login",
+        "https://feb8-2402-4000-2100-2e02-d0e4-3598-d05f-6d43.ngrok-free.app/api/auth/login",
         {
           method: "POST",
           headers: {
