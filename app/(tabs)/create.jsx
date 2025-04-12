@@ -83,8 +83,7 @@ export default function Create() {
         ? `image/${fileType.toLowerCase()}`
         : "image/jpeg";
 
-      const imageDataUrl = `data:${imageType};base64,${imageBase64}`;      
-      
+      const imageDataUrl = `data:${imageType};base64,${imageBase64}`;
 
       const response = await fetch(`${API_URL}/books`, {
         method: "POST",
@@ -113,10 +112,12 @@ export default function Create() {
 
       router.push("/");
     } catch (error) {
-      setIsLoading(false)
+      setIsLoading(false);
       console.log("Error creating post : ", error);
 
       Alert.alert("Error", "Something went wrong!");
+    } finally {
+      setIsLoading(false);
     }
   };
 
